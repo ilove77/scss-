@@ -1,0 +1,47 @@
+步驟一：安裝ruby
+Sass與Compass是用ruby開發的，
+如果你是windows環境時，
+就必須先到他的官網安裝最新的ruby，
+http://rubyinstaller.org/downloads/
+
+步驟二：安裝Sass、compass
+按下『Windows(微軟鍵)』+R，
+在跳出的視窗打入「CMD」後按確定便可開啟「命令提示字元」，
+輸入以下程式碼後按ENTER，
+
+gem install compass
+步驟三：開啟一個Compass專案
+先在D槽開一個新資料夾為compass後，
+在命令提示字元打以下程式碼後，
+系統就會自動在compass資料夾新增一個名為coffee的專案，
+
+d:
+cd compass
+compass create coffee
+當你希望sass檔案更新時，系統就直接編譯成CSS的話，
+需輸入以下字元進行監控動作：
+註：後面的coffee則看你的專案資料夾而有所修改，
+
+compass watch coffee
+而要停止監控(watch)的話，則是命令提示視窗打ctrl+c就可以停止。
+
+步驟四：config.rb設定
+1.如果你希望sass編譯出來的css不要有註解，
+那就打開根目錄的config.rb，
+將# line_comments = false 前面的#號拿掉就不會產生出註解。
+
+2.裡面會有四行以下的預設設定碼，
+如果你放CSS的資料夾名稱為CSS，
+便把stylesheets名稱改為CSS，
+這樣Sass編譯出來的CSS就會在CSS資料夾，
+而不會style裡面。
+
+css_dir = "stylesheets"
+sass_dir = "sass"
+images_dir = "images"
+javascripts_dir = "javascripts"
+注意：當修改config設定後，
+要重新在命令提示字元watch資料夾一次，
+設定才會生效。
+
+--
