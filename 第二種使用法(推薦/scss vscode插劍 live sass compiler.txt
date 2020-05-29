@@ -1,0 +1,27 @@
+Live Sass Compiler 設定 ( 詳細解說影片空降地點 52:30 )
+liveSassCompile.settings.formats 參數說明
+
+format - 指定編譯css的樣式類型
+expanded : 開發用, 產出的css看不出是用scss/sass
+nested
+compact : 開發用, 產出的css可以看的出是用scss/sass
+compressed : 發行使用，輸出時，幫忙做程式碼壓縮
+extensionName - 產出的副檔名，.css為一般程式碼，.min.css為壓縮程式
+savePath - 指定編譯完後檔案存放路徑
+"liveSassCompile.settings.formats": [
+    {
+        "format": "compact", 
+        "extensionName": ".css",
+        "savePath": "/style"
+    }
+]
+liveSassCompile.settings.generateMap
+
+true or false：關閉編譯css後的map檔案。
+liveSassCompile.settings.autoprefix
+
+編譯成 css 時，Vender Prefixes問題，自動加入後處理器
+編譯成 css 時，可幫忙加入瀏覽器前綴
+browserslist
+Github
+Offical -> 線上查詢有哪些瀏覽器跟版本符合
